@@ -26,4 +26,14 @@ def generate_password(length=8):
     password = ''.join(random.sample(password, len(password)))
     return password
 
+if __name__ = "__main__":
+    try:
+        length = int(input("Enter password length: "))
+        password = generate_password(length)
+        if password:
+            print("Generated Password:", password)
+    except ValueError:
+        print("Please enter a valid number.")
+        
+
 
